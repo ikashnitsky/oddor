@@ -16,4 +16,5 @@ Imports:
     magrittr,
     stringr
 BugReports: https://github.com/ikashnitsky/oddor/issues
-Encoding: UTF-8
+Depends: 
+    R (>= 2.10)

@@ -13,7 +13,7 @@ odds_clean_tournament_dataframe <- function(oddsportal_raw) {
     require(stringr)
 
     suppressWarnings(
-        oddsportal_raw  %>%
+        oddsportal_raw %>%
             # remove empty rows
             filter(! w == "NA") %>%
             # clean date and stage variables

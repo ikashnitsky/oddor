@@ -28,7 +28,7 @@ odds_table_from_url <- function(url) {
     remDr$close()
 
     foo <- url_fix %>%
-        str_remove(paste0("/results/#/page/.*/")) %>%
+        str_remove("/results/#/page/.*") %>%
         # https://stackoverflow.com/a/8374980/4638884
         str_extract("(?:[^\\/](?!(\\|/)))+$") %>%
         str_replace_all("-", " ")
