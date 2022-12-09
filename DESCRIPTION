@@ -1,11 +1,19 @@
 Package: oddor
 Type: Package
-Title: What the Package Does (Title Case)
+Title: historical odds data from oddsportal, ready for R
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: c(
+   person("Ilya", "Kashnitsky", role = c("aut", "cre"), 
+          email = "ilya.kashnitsky@gmail.com", 
+          comment = c(ORCID = "0000-0003-1835-8687")))
+Description: The website https://www.oddsportal.com provides historical data for the outcomes of various sport events and the betting odds associated with them. The website is dynamically generated, which makes it difficult to scrape the data from it. `oddor` provides functions to scrape this data and stores some popular competitions data within the package, ready to be used in R.
+License: file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.2.1
+Imports:
+    dplyr,
+    magrittr,
+    stringr
+BugReports: https://github.com/ikashnitsky/oddor/issues
+Encoding: UTF-8

@@ -10,7 +10,7 @@ Install the package from github, load it and use the data.
 
 ```{r}
 # install
-devtools::install_github("ikashnitsky/oddor")
+remotes::install_github("ikashnitsky/oddor")
 
 # load
 library(oddor)
