@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 [![Version-Number](https://img.shields.io/github/r-package/v/ikashnitsky/oddor?label=oddor&logo=R&style=flat-square)](https://github.com/ikashnitsky/oddor) 
-[![R-CMD-check](https://github.com/ikashnitsky/oddor/actions/workflows/R-CMD-check.yml/badge.svg?style=flat-square)](https://github.com/ikashnitsky/oddor/actions/workflows/R-CMD-check.yml) 
+[![R-CMD-check](https://img.shields.io/github/workflow/status/ikashnitsky/oddor/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=flat-square)](https://github.com/ikashnitsky/oddor/actions/workflows/R-CMD-check.yml) 
 [![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999?style=flat-square&logo=github)](https://github.com/ikashnitsky/oddor) 
 [![Contributors](https://img.shields.io/github/contributors/ikashnitsky/oddor?style=flat-square)](https://github.com/ikashnitsky/oddor/graphs/contributors) 
 [![Twitter Follow](https://img.shields.io/twitter/follow/ikashnitsky?color=blue&label=%40ikashnitsky&logo=twitter&style=flat-square)](https://twitter.com/ikashnitsky) 
