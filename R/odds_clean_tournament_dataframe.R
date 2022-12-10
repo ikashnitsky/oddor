@@ -8,9 +8,6 @@
 #'
 #' @param oddsportal_raw raw dataframe from \code{odds_table_from_url()}
 odds_clean_tournament_dataframe <- function(oddsportal_raw) {
-    require(magrittr)
-    require(dplyr)
-    require(stringr)
 
     suppressWarnings(
         oddsportal_raw %>%

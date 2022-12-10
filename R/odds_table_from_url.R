@@ -9,9 +9,6 @@
 #' The function takes \code{oddsportal} url as input and downloads the tournament data.
 #' @param url a base text url leading to \code{oddsportal} results table
 odds_table_from_url <- function(url) {
-    require(magrittr)
-    require(dplyr)
-    require(stringr)
 
     # fix url if no page number is specified
     if (word(url, -2, sep = "/") == "results"){

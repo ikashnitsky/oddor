@@ -23,7 +23,7 @@ urls <- paste0(
 odds_set_up_virtual_browser(port = 8912)
 soccer_world_cup_raw <- urls %>% map_df(odds_table_from_url)
 
-# fix the error with furure matches
+# fix the error with future matches
 soccer_world_cup_raw <- soccer_world_cup_raw %>%
     filter(! x %in% c("Croatia - Brazil", "Netherlands - Argentina"))
 

@@ -15,9 +15,6 @@
 #' set up the virtual browser
 #' @param port an integer or numeric 4 digit input
 odds_set_up_virtual_browser <- function(port = 8912L) {
-    require(wdman)
-    require(RSelenium)
-    require(rvest)
 
     port <- as.integer(port)
 
