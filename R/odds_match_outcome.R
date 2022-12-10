@@ -9,6 +9,11 @@
 #'
 #' The function takes \code{oddsportal} score sting of the type "2:1" and parses it into the goals the outcome variable: eaither "home", "away", or "draw".
 #' @param score_string a text input from the score column of the \code{oddsportal} dataset
+#'
+#' @importFrom magrittr %>%
+#' @importFrom stringr str_detect
+#' @importFrom stringr str_extract
+#' @export
 odds_match_outcome <- function(score_string) {
 
     if(score_string == "canc."){

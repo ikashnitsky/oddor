@@ -8,6 +8,14 @@
 #'
 #' The function takes \code{oddsportal} url as input and downloads the tournament data.
 #' @param url a base text url leading to \code{oddsportal} results table
+#'
+#' @importFrom magrittr %>% set_colnames extract
+#' @importFrom stringr str_detect str_remove_all str_trim
+#' @importFrom stringr word str_remove str_extract str_replace_all
+#' @importFrom rvest read_html html_nodes html_table
+#' @importFrom dplyr mutate across
+#' @importFrom tidyselect everything
+#' @export
 odds_table_from_url <- function(url) {
 
     # fix url if no page number is specified

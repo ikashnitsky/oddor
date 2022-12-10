@@ -7,12 +7,20 @@
 #' Clean the dataframe downloaded from \code{oddsportal}
 #'
 #' @param oddsportal_raw raw dataframe from \code{odds_table_from_url()}
+#'
+#' @importFrom magrittr set_colnames extract
+#' @importFrom magrittr %>%
+#' @importFrom stringr str_to_lower str_extract
+#' @importFrom dplyr mutate filter group_by ungroup case_when transmute
+#' @importFrom tidyr fill separate replace_na
+#' @importFrom rlang .data
+#' @export
 odds_clean_tournament_dataframe <- function(oddsportal_raw) {
 
     suppressWarnings(
         oddsportal_raw %>%
             # remove empty rows
-            filter(! w == "NA") %>%
+            filter(! .data$w == "NA") %>%
             # clean date and stage variables
             mutate(
                 a = case_when(

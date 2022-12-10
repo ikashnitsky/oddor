@@ -14,6 +14,10 @@
 
 #' set up the virtual browser
 #' @param port an integer or numeric 4 digit input
+#'
+#' @importFrom wdman phantomjs
+#' @importFrom RSelenium remoteDriver
+#' @export
 odds_set_up_virtual_browser <- function(port = 8912L) {
 
     port <- as.integer(port)

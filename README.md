@@ -1,7 +1,7 @@
 # **oddor: historical odds data from oddsportal, ready for R**  <a href='https://www.reddit.com/r/dataisbeautiful/comments/zcm4r0'><img src='inst/figures/hex-oddor.png' align="right" width="20%" min-width="200px"/></a>
 
 <!-- badges: start -->
-[![Version-Number](https://img.shields.io/github/r-package/v/ikashnitsky/oddor?label=oddor&logo=R&?style=flat-square)](https://github.com/ikashnitsky/oddor) 
+[![Version-Number](https://img.shields.io/github/r-package/v/ikashnitsky/oddor?label=oddor&logo=R&style=flat-square)](https://github.com/ikashnitsky/oddor) 
 [![R-CMD-check](https://github.com/ikashnitsky/oddor/actions/workflows/R-CMD-check.yml/badge.svg?style=flat-square)](https://github.com/ikashnitsky/oddor/actions/workflows/R-CMD-check.yml) 
 [![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999?style=flat-square&logo=github)](https://github.com/ikashnitsky/oddor) 
 [![Contributors](https://img.shields.io/github/contributors/ikashnitsky/oddor?style=flat-square)](https://github.com/ikashnitsky/oddor/graphs/contributors) 
