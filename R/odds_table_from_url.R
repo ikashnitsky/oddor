@@ -28,9 +28,11 @@ odds_table_from_url <- function(url) {
     }
 
     remDr$open(silent = TRUE)
+    Sys.sleep(1)
     remDr$navigate(url_fix)
     page <- remDr$getPageSource()
     remDr$close()
+    Sys.sleep(1)
 
     foo <- url_fix %>%
         str_remove("/results/#/page/.*") %>%
@@ -50,15 +52,28 @@ odds_table_from_url <- function(url) {
         read_html() %>%
         html_nodes(xpath='//table[@id="tournamentTable"]') %>%
         html_table(fill = T) %>%
-        as.data.frame() %>%
-        set_colnames(letters %>% rev %>% extract(1:7)) %>%
-        filter(! z == "") %>%
-        mutate(
-            s = year,
-            r = tournament
-        ) %>%
-        mutate(across(.cols = everything(), ~ .x %>% paste))
+        as.data.frame()
 
-    return(table)
+        # handle the error when the url contains an empty table
+        # https://stackoverflow.com/a/14749552/4638884
+        tryCatch(
+            {
+                print(paste(year, "page", url_fix %>% str_sub(-1, -1)))
+                if (nrow(table) == 0) stop("Empty tournament table") else {
+                    out <- table %>%
+                        set_colnames(letters %>% rev %>% extract(1:7)) %>%
+                        filter(! z == "") %>%
+                        mutate(
+                            s = year,
+                            r = tournament
+                        ) %>%
+                        mutate(across(.cols = everything(), ~ .x %>% paste))
+
+                    return(out)
+                }
+            },
+            error=function(e){cat("URL skipped: Empty tournament table \n",conditionMessage(e), "\n")}
+        )
+
 }
 

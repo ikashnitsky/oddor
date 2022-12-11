@@ -4,10 +4,12 @@
 \alias{odds_set_up_virtual_browser}
 \title{set up the virtual browser}
 \usage{
-odds_set_up_virtual_browser(port = 8912L)
+odds_set_up_virtual_browser(port = 4445L, browser = "firefox")
 }
 \arguments{
 \item{port}{an integer or numeric 4 digit input}
+
+\item{browser}{text string: either "firefox" (default), "chorome", or  "phantomjs"}
 }
 \description{
 set up the virtual browser

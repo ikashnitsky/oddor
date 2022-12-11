@@ -30,7 +30,7 @@ oddsportal, (n.d.). [Portal]. Retrieved 2022-12-09, from https://www.oddsportal.
 soccer_world_cup
 }
 \description{
-Resulrs of FIFA World Cups 2006, 2010, 2014, 2018, and 2022
+Results of FIFA World Cups 2006, 2010, 2014, 2018, and 2022
 }
 \examples{
 

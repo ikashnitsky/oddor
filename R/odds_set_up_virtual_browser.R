@@ -14,20 +14,33 @@
 
 #' set up the virtual browser
 #' @param port an integer or numeric 4 digit input
+#' @param browser text string: either "firefox" (default), "chorome", or  "phantomjs"
 #'
 #' @importFrom wdman phantomjs
 #' @importFrom RSelenium remoteDriver
 #' @export
-odds_set_up_virtual_browser <- function(port = 8912L) {
+odds_set_up_virtual_browser <- function(
+
+    port = 4445L,
+    browser = "firefox"
+) {
 
     port <- as.integer(port)
 
-    pjs <- wdman::phantomjs(port=port)
+    pjs <- wdman::phantomjs(port = port)
 
-    eCap <- list(phantomjs.page.settings.userAgent
-                 = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20120101 Firefox/29.0", phantomjs.page.settings.loadImages = FALSE, phantomjs.phantom.cookiesEnabled = FALSE, phantomjs.phantom.javascriptEnabled = TRUE)
+    eCap <- list(
+        phantomjs.page.settings.userAgent
+        = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20120101 Firefox/29.0",
+        phantomjs.page.settings.loadImages = FALSE,
+        phantomjs.phantom.cookiesEnabled = FALSE,
+        phantomjs.phantom.javascriptEnabled = TRUE
+    )
 
     # return to the global environment
-    .GlobalEnv$remDr<-remoteDriver(port=port, browser="phantomjs", extraCapabilities = eCap)
+    .GlobalEnv$remDr <-
+        remoteDriver(port = port,
+                     browser = browser,
+                     extraCapabilities = eCap)
 
 }

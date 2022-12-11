@@ -1,15 +1,11 @@
 #===============================================================================
-# 2022-12-08 -- oddor
-# prepare the session
+# 2022-12-11 -- oddor
+# package build lines
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com, @ikashnitsky
 #===============================================================================
 
-library(tidyverse)
-library(magrittr)
-library(wdman)
-library(RSelenium)
-library(rvest)
-library(ggrepel)
-library(sysfonts)
-library(showtext)
-library(prismatic)
+devtools::document()
+
+devtools::build()
+
+devtools::check()

@@ -16,7 +16,7 @@
 #' @export
 odds_match_outcome <- function(score_string) {
 
-    if(score_string == "canc."){
+    if(score_string == "canc." | score_string == "award."){
         return("-")
     } else {
         draw_extra_time <- score_string %>% str_detect("ET")
