@@ -148,3 +148,35 @@
 #'   \url{https://www.oddsportal.com/soccer/europe/europa-league-2021-2022/results/}
 
 "soccer_europa_league"
+
+
+# Europa Conference League ------------------------------------------------
+
+
+#' UEFA Europa Conference League
+#'
+#' Results of UEFA Europa Conference League, seasons 2021/2022 -- 2022/2023.
+#'
+#' @format
+#'   A tibble with 423 rows and 13 variables:
+#'   \describe{
+#'     \item{tournament}{The name of the tournament.}
+#'     \item{year}{Year of tournament.}
+#'     \item{stage}{Stage at which the game was played: Group, or Play-offs. Qualification games are not inqluded in the dataset.}
+#'     \item{home}{Team playing at home.}
+#'     \item{away}{Team playing away.}
+#'     \item{goals_home}{Number of goals scored by the team playing at home.}
+#'     \item{goals_away}{Number of goals scored by the team playing away.}
+#'     \item{et_or_pen}{For the Play-off stage games that ended witha  draw in main time, an indication whether the game spanned into extra time ("et") or whether it ended with a series of penalty shots ("pen")}
+#'     \item{outcome}{The outcome of the game: "home", "draw", or "away".}
+#'     \item{odds_home}{Odds for the win of the team playing at home in the main time.}
+#'     \item{odds_draw}{Odds for a draw in main time.}
+#'     \item{odds_away}{Odds for the win of the team playing away in the main time.}
+#'     \item{odds_win}{The odds associated with the outcome of the game.}
+#'   }
+#'
+#' @source
+#'   oddsportal, (n.d.). [Portal]. Retrieved 2022-12-09, from https://www.oddsportal.com
+#'   \url{https://www.oddsportal.com/soccer/europe/europa-conference-league-2021-2022/results/}
+
+"soccer_europa_conference_league"

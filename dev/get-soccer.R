@@ -95,3 +95,24 @@ soccer_europa_league <- soccer_europa_league_raw %>%
 
 usethis::use_data(soccer_europa_league)
 
+
+
+# Europa Conference League ------------------------------------------------
+
+urls_europa_conference_league <- paste0(
+    "https://www.oddsportal.com/soccer/europe/europa-conference-league-",
+    2021:2022, "-", 2022:2023,
+    "/results/#/page/"
+) %>%
+    map(function(x) x %>% paste0(1:9)) %>%
+    unlist()
+
+
+odds_set_up_virtual_browser(port = 4445, browser = "firefox")
+soccer_europa_conference_league_raw <- urls_europa_conference_league %>%
+    map_df(odds_table_from_url)
+
+soccer_europa_conference_league <- soccer_europa_conference_league_raw %>%
+    odds_clean_tournament_dataframe()
+
+usethis::use_data(soccer_europa_conference_league)
