@@ -1,5 +1,9 @@
 # Data --------------------------------------------------------------------
 
+
+# FIFA World Cups ---------------------------------------------------------
+
+
 #' FIFA World Cups
 #'
 #' Results of FIFA World Cups 2006, 2010, 2014, 2018, and 2022
@@ -82,6 +86,9 @@
 "soccer_world_cup"
 
 
+# UEFA Champions League ---------------------------------------------------
+
+
 #' UEFA Champions League
 #'
 #' Results of UEFA Champions League, seasons 2003/2004 -- 2021/2022
@@ -106,6 +113,38 @@
 #'
 #' @source
 #'   oddsportal, (n.d.). [Portal]. Retrieved 2022-12-09, from https://www.oddsportal.com
-#'   \url{https://www.oddsportal.com/soccer/world/world-cup-2022/results/}
+#'   \url{https://www.oddsportal.com/soccer/europe/champions-league-2021-2022/results/}
 
 "soccer_champions_league"
+
+
+
+# UEFA Europa League ------------------------------------------------------
+
+#' UEFA Europa League
+#'
+#' Results of UEFA Europa League, seasons 2003/2004 -- 2021/2022. Note that before season 2009/2010 the competition was known as UEFA Cup
+#'
+#' @format
+#'   A tibble with 1914 rows and 13 variables:
+#'   \describe{
+#'     \item{tournament}{The name of the tournament.}
+#'     \item{year}{Year of tournament.}
+#'     \item{stage}{Stage at which the game was played: Group, or Play-offs. Qualification games are not inqluded in the dataset.}
+#'     \item{home}{Team playing at home.}
+#'     \item{away}{Team playing away.}
+#'     \item{goals_home}{Number of goals scored by the team playing at home.}
+#'     \item{goals_away}{Number of goals scored by the team playing away.}
+#'     \item{et_or_pen}{For the Play-off stage games that ended witha  draw in main time, an indication whether the game spanned into extra time ("et") or whether it ended with a series of penalty shots ("pen")}
+#'     \item{outcome}{The outcome of the game: "home", "draw", or "away".}
+#'     \item{odds_home}{Odds for the win of the team playing at home in the main time.}
+#'     \item{odds_draw}{Odds for a draw in main time.}
+#'     \item{odds_away}{Odds for the win of the team playing away in the main time.}
+#'     \item{odds_win}{The odds associated with the outcome of the game.}
+#'   }
+#'
+#' @source
+#'   oddsportal, (n.d.). [Portal]. Retrieved 2022-12-09, from https://www.oddsportal.com
+#'   \url{https://www.oddsportal.com/soccer/europe/europa-league-2021-2022/results/}
+
+"soccer_europa_league"
