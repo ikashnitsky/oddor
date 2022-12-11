@@ -6,6 +6,6 @@
 
 devtools::document()
 
-# devtools::build()  # click button insted
+# devtools::build()  # click button instead
 
 devtools::check()

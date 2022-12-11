@@ -67,6 +67,7 @@ usethis::use_data(soccer_champions_league)
 
 
 # Europa league / UEFA cup -----------------------------------------------------------
+# https://www.oddsportal.com/soccer/europe/europa-league/results/
 
 urls_europa_league <- paste0(
     "https://www.oddsportal.com/soccer/europe/europa-league-",
@@ -98,6 +99,7 @@ usethis::use_data(soccer_europa_league)
 
 
 # Europa Conference League ------------------------------------------------
+# https://www.oddsportal.com/soccer/europe/europa-conference-league/results/
 
 urls_europa_conference_league <- paste0(
     "https://www.oddsportal.com/soccer/europe/europa-conference-league-",
@@ -116,3 +118,28 @@ soccer_europa_conference_league <- soccer_europa_conference_league_raw %>%
     odds_clean_tournament_dataframe()
 
 usethis::use_data(soccer_europa_conference_league)
+
+
+
+# English Premier League -------------------------------------------------
+
+# https://www.oddsportal.com/soccer/england/premier-league-2003-2004/results/
+
+urls_premier_league <- paste0(
+    "https://www.oddsportal.com/soccer/england/premier-league-",
+    2003:2022,
+    "-",
+    2004:2023,
+    "/results/#/page/"
+) %>%
+    map(function(x) x %>% paste0(1:8)) %>%
+    unlist()
+
+odds_set_up_virtual_browser(port = 4445, browser = "firefox")
+soccer_premier_league_raw <- urls_premier_league %>%
+    map_df(odds_table_from_url)
+
+soccer_premier_league <- soccer_premier_league_raw %>%
+    odds_clean_tournament_dataframe()
+
+usethis::use_data(soccer_premier_league)
