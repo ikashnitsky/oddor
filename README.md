@@ -1,11 +1,12 @@
 #  <a href='https://www.reddit.com/r/dataisbeautiful/comments/zcm4r0'><img src='inst/figures/hex-oddor.png' align="right" width="20%" min-width="200px"/></a> **oddor: historical odds data from oddsportal, ready for R**
 
 <!-- badges: start -->
-[![Version-Number](https://img.shields.io/github/r-package/v/ikashnitsky/oddor?label=oddor&logo=R&style=flat-square)](https://github.com/ikashnitsky/oddor) 
-[![R-CMD-check](https://img.shields.io/github/workflow/status/ikashnitsky/oddor/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=flat-square)](https://github.com/ikashnitsky/oddor/actions/workflows/R-CMD-check.yml) 
-[![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999?style=flat-square&logo=github)](https://github.com/ikashnitsky/oddor) 
-[![Contributors](https://img.shields.io/github/contributors/ikashnitsky/oddor?style=flat-square)](https://github.com/ikashnitsky/oddor/graphs/contributors) 
-[![Twitter Follow](https://img.shields.io/twitter/follow/ikashnitsky?color=blue&label=%40ikashnitsky&logo=twitter&style=flat-square)](https://twitter.com/ikashnitsky) 
+[![Version-Number](https://img.shields.io/github/r-package/v/ikashnitsky/oddor?label=oddor&logo=R&style=flat)](https://github.com/ikashnitsky/oddor) 
+[![R-CMD-check](https://img.shields.io/github/workflow/status/ikashnitsky/oddor/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=flat)](https://github.com/ikashnitsky/oddor/actions/workflows/R-CMD-check.yml) 
+[![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999?style=flat&logo=github)](https://github.com/ikashnitsky/oddor) 
+[![Contributors](https://img.shields.io/github/contributors/ikashnitsky/oddor?style=flat)](https://github.com/ikashnitsky/oddor/graphs/contributors) 
+![Mastodon Follow](https://img.shields.io/mastodon/follow/109292146183754832?domain=https%3A%2F%2Ffosstodon.org)
+
 
 <!-- badges: end -->
 
