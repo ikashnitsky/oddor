@@ -5,7 +5,7 @@
 \alias{soccer_world_cup}
 \title{FIFA World Cups}
 \format{
-A tibble with 303 rows and 13 variables:
+A tibble with 256 rows and 13 variables:
   \describe{
     \item{tournament}{The name of the tournament.}
     \item{year}{Year of tournament.}
@@ -23,14 +23,14 @@ A tibble with 303 rows and 13 variables:
   }
 }
 \source{
-oddsportal, (n.d.). [Portal]. Retrieved 2022-12-09, from https://www.oddsportal.com
+oddsportal, (n.d.). [Portal]. Retrieved 2022-12-25, from https://www.oddsportal.com
   \url{https://www.oddsportal.com/soccer/world/world-cup-2022/results/}
 }
 \usage{
 soccer_world_cup
 }
 \description{
-Results of FIFA World Cups 2006, 2010, 2014, 2018, and 2022
+Results of FIFA World Cups 2010, 2014, 2018, and 2022
 }
 \examples{
 

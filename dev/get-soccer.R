@@ -12,21 +12,28 @@ library(oddor)
 
 # world cup ---------------------------------------------------------------
 
-urls <- paste0(
-    "https://www.oddsportal.com/soccer/world/world-cup-",
-    seq(2006, 2022, 4),
-    "/results/#/page/"
+urls <- c(
+    paste0(
+        "https://www.oddsportal.com/soccer/world/world-cup-",
+        seq(2010, 2018, 4),
+        "/results/#/page/"
+    ),
+    paste0(
+        "https://www.oddsportal.com/soccer/world/world-championship-",
+        2022,
+        "/results/#/page/"
+    )
 ) %>%
     map(function(x) x %>% paste0(1:2)) %>%
     unlist()
 
 # for some reason these two lines work really unstable, I have to try several times before it works
-odds_set_up_virtual_browser(port = 8912)
+odds_set_up_virtual_browser(port = 4445)
 soccer_world_cup_raw <- urls %>% map_df(odds_table_from_url)
-
-# fix the error with future matches
-soccer_world_cup_raw <- soccer_world_cup_raw %>%
-    filter(! x %in% c("Croatia - Brazil", "Netherlands - Argentina"))
+#
+# # fix the error with future matches
+# soccer_world_cup_raw <- soccer_world_cup_raw %>%
+#     filter(! x %in% c("Croatia - Brazil", "Netherlands - Argentina"))
 
 save(soccer_world_cup_raw, file = "~/Downloads/raw_data_wc.rda")
 
@@ -37,7 +44,7 @@ soccer_world_cup <- soccer_world_cup_raw %>%
 soccer_world_cup <- soccer_world_cup %>%
     filter(!stage == "Qualification")
 
-usethis::use_data(soccer_world_cup)
+usethis::use_data(soccer_world_cup, overwrite = TRUE)
 
 
 
